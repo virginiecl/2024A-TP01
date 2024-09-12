@@ -9,5 +9,5 @@ chlore = float(water_quantity)/10
 answer = f"""Voici les éléments requis pour assainir {water_quantity}L d'eau:\n
         \t- Filtre(s) : {filtre}\n
         \t- Lampe(s) UV : {lampe}\n
-        \t- Chlore : {chlore}kg\n"""
+        \t- Chlore : {chlore}kg"""
 print(answer)
