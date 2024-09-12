@@ -20,7 +20,7 @@ else:
     distance = 6*battery_level
 
 if battery_level > 0:
-    print(f"{distance} km")
+    print(f"{distance:.2f} km")
 
 else:
     print("La batterie est vide")
