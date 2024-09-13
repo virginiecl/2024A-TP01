@@ -4,7 +4,10 @@
 #        Assurez une gestion du pourcentage valide au cours de votre programme (% toujours dans [0 ; 100]).
 
 battery_level = float(input("Pourcentage de batterie ? "))
-if battery_level > 50:
+if battery_level > 100 or battery_level < 0:
+    print("Valeur non valide")
+
+elif battery_level > 50:
     distance = 2*(battery_level - 50) + 25*0.5 + 15 + 5*2.5 + 5*6
 
 elif battery_level > 25:
@@ -19,10 +22,10 @@ elif battery_level > 5:
 else:
     distance = 6*battery_level
 
-if battery_level > 0:
-    print(f"{distance:.2f} km")
+if battery_level > 0 and battery_level <= 100:
+    print(f"{distance:.1f} km")
 
-else:
+elif battery_level == 0:
     print("La batterie est vide")
 
 
