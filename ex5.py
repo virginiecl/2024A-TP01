@@ -6,20 +6,17 @@ code_medals = input("Chaine représentant les médailles ? ")
 
 letters = [x for x in code_medals]
 medals = ["G", "S", "B"]
-new_code = []
+wrong = []
 
-for lettre in letters:
-    if lettre in medals:
-        new_code.append(lettre)
+for i in range(0, len(letters)):
+    if letters[i] not in medals:
+        wrong.append(letters[i])
 
-    else:
-        print("Veuillez entrer une chaîne valide.")
-        break
-
-if len(new_code) >= 1:
-    count_G = new_code.count("G")
-    count_S = new_code.count("S")
-    count_B = new_code.count("B")
+if len(wrong) > 0:
+    print("Veuillez entrer une chaîne valide.")
+else:
+    count_G = letters.count("G")
+    count_S = letters.count("S")
+    count_B = letters.count("B")
 
     print(f"{country}:\n- {count_G} OR\n- {count_S} Argent\n- {count_B} Bronze")
-
